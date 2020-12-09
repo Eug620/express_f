@@ -75,7 +75,6 @@
 
 <script>
   import { isPassword } from '@/utils/validate'
-
   export default {
     name: 'Login',
     directives: {

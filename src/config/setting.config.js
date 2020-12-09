@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-09 11:56:30
+ * @LastEditTime: 2020-12-09 15:04:56
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -27,9 +27,9 @@ const setting = {
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
   title: 'express_font',
   //简写
-  abbreviation: 'vab',
+  abbreviation: 'E-F',
   //开发环境端口号
-  devPort: '80',
+  devPort: '3000',
   //版本号
   version: process.env.VUE_APP_VERSION,
   //这一项非常重要！请务必保留MIT协议下package.json及copyright作者信息 即可免费商用，不遵守此项约定你将无法使用该框架，如需自定义版权信息请联系QQ1204505056

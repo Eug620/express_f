@@ -1,3 +1,10 @@
+/*
+ * @Author: yeyuhang
+ * @Date: 2020-12-09 11:29:19
+ * @LastEditTime: 2020-12-09 12:35:11
+ * @LastEditors: yeyuhang
+ * @Descripttion: 头部注释
+ */
 import request from '@/utils/request'
 import { encryptedData } from '@/utils/encrypt'
 import { loginRSA, tokenName } from '@/config'
@@ -34,5 +41,12 @@ export function register() {
   return request({
     url: '/register',
     method: 'post',
+  })
+}
+
+export function getUserList() {
+  return request({
+    url: '/user/getUserList',
+    method: 'get',
   })
 }
