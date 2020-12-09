@@ -1,11 +1,5 @@
 <template>
   <div class="login-container">
-    <el-alert
-      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
-      type="success"
-      :closable="false"
-      style="position: fixed"
-    ></el-alert>
     <el-row>
       <el-col :xs="24" :sm="24" :md="12" :lg="16" :xl="16">
         <div style="color: transparent">占位符</div>
@@ -18,8 +12,8 @@
           class="login-form"
           label-position="left"
         >
-          <div class="title">hello !</div>
-          <div class="title-tips">欢迎来到{{ title }}！</div>
+          <div class="title">Hello !</div>
+          <div class="title-tips">Welcome&ensp;{{ title }}！</div>
           <el-form-item style="margin-top: 40px" prop="username">
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
@@ -75,6 +69,7 @@
 
 <script>
   import { isPassword } from '@/utils/validate'
+  import { getUserList } from '@/api/user'
   export default {
     name: 'Login',
     directives: {
@@ -151,9 +146,11 @@
         })
       },
       handleLogin() {
-        this.$refs.form.validate((valid) => {
+        this.$refs.form.validate(async (valid) => {
           if (valid) {
             this.loading = true
+            let rrr = await getUserList()
+            console.log(rrr)
             this.$store
               .dispatch('user/login', this.form)
               .then(() => {

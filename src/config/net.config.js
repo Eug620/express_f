@@ -1,9 +1,16 @@
+/*
+ * @Author: yeyuhang
+ * @Date: 2020-12-09 11:29:19
+ * @LastEditTime: 2020-12-09 18:15:23
+ * @LastEditors: yeyuhang
+ * @Descripttion: 头部注释
+ */
 /**
  * @description 导出默认网路配置
  **/
 const network = {
   //配后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
-  contentType: 'application/json;charset=UTF-8',
+  contentType: 'application/x-www-form-urlencoded;charset=UTF-8',
   //消息框消失时间
   messageDuration: 3000,
   //最长请求时间

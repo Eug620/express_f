@@ -28,7 +28,7 @@ const dayjs = require('dayjs')
 const date = dayjs().format('YYYY_M_D')
 const time = dayjs().format('YYYY-M-D HH:mm:ss')
 const productionGzipExtensions = ['html', 'js', 'css', 'svg']
-process.env.VUE_APP_TITLE = title || 'express_font'
+process.env.VUE_APP_TITLE = title || 'Test Font'
 process.env.VUE_APP_AUTHOR = author || 'XXX.com'
 process.env.VUE_APP_UPDATE_TIME = time
 process.env.VUE_APP_VERSION = version
@@ -55,6 +55,14 @@ module.exports = {
       errors: true,
     },
     after: mockServer(),
+    proxy: {
+      '/api': {
+        target: 'http://47.93.229.170:3000',
+        pathRewrite: {
+          '^/api': '',
+        },
+      },
+    },
   },
   configureWebpack() {
     return {
