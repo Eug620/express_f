@@ -69,7 +69,6 @@
 
 <script>
   import { isPassword } from '@/utils/validate'
-  import { getUserList } from '@/api/user'
   export default {
     name: 'Login',
     directives: {
@@ -149,8 +148,6 @@
         this.$refs.form.validate(async (valid) => {
           if (valid) {
             this.loading = true
-            let rrr = await getUserList()
-            console.log(rrr)
             this.$store
               .dispatch('user/login', this.form)
               .then(() => {
