@@ -1,9 +1,9 @@
 {
-  "name": "vue-admin-beautiful",
+  "name": "express_font",
   "version": "1.0.0",
-  "author": "vue-admin-beautiful",
+  "author": "express_font",
   "participants": [],
-  "homepage": "https://chu1204505056.gitee.io/vue-admin-beautiful",
+  "homepage": "https://eug620.github.io/express_f",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
