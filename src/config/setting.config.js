@@ -1,3 +1,10 @@
+/*
+ * @Author: yeyuhang
+ * @Date: 2020-12-09 11:29:19
+ * @LastEditTime: 2020-12-09 11:56:30
+ * @LastEditors: yeyuhang
+ * @Descripttion: 头部注释
+ */
 /**
  * @description 导出默认通用配置
  */
@@ -18,7 +25,7 @@ const setting = {
       ? 'vab-mock-server'
       : 'vab-mock-server',
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: 'vue-admin-beautiful',
+  title: 'express_font',
   //简写
   abbreviation: 'vab',
   //开发环境端口号
@@ -42,7 +49,7 @@ const setting = {
   //token名称
   tokenName: 'accessToken',
   //token在localStorage、sessionStorage存储的key的名称
-  tokenTableName: 'vue-admin-beautiful',
+  tokenTableName: 'express-font-token',
   //token存储位置localStorage sessionStorage
   storage: 'localStorage',
   //token失效回退到登录页时是否记录本次的路由

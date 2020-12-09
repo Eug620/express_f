@@ -25,10 +25,6 @@
     "push": "start ./push.sh",
     "deploy": "start ./deploy.sh"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chuzhixin/vue-admin-beautiful.git"
-  },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

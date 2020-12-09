@@ -1,3 +1,10 @@
+<!--
+ * @Author: yeyuhang
+ * @Date: 2020-12-09 11:29:19
+ * @LastEditTime: 2020-12-09 12:20:50
+ * @LastEditors: yeyuhang
+ * @Descripttion: 头部注释
+-->
 <template>
   <el-dropdown @command="handleCommand">
     <span class="avatar-dropdown">
@@ -39,10 +46,10 @@
             this.personalCenter()
             break
           case 'github':
-            window.open('https://github.com/chuzhixin/vue-admin-beautiful')
+            // window.open('https://github.com/chuzhixin/vue-admin-beautiful')
             break
           case 'gitee':
-            window.open('https://gitee.com/chu1204505056/vue-admin-beautiful')
+            // window.open('https://gitee.com/chu1204505056/vue-admin-beautiful')
             break
         }
       },
