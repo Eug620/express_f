@@ -14,12 +14,12 @@
         >
           <div class="title">Hello !</div>
           <div class="title-tips">Welcome&ensp;{{ title }}！</div>
-          <el-form-item style="margin-top: 40px" prop="username">
+          <el-form-item style="margin-top: 40px" prop="userName">
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
             </span>
             <el-input
-              v-model.trim="form.username"
+              v-model.trim="form.userName"
               v-focus
               placeholder="请输入用户名"
               tabindex="1"
@@ -79,7 +79,7 @@
       },
     },
     data() {
-      const validateusername = (rule, value, callback) => {
+      const validateuserName = (rule, value, callback) => {
         if ('' == value) {
           callback(new Error('用户名不能为空'))
         } else {
@@ -97,15 +97,15 @@
         nodeEnv: process.env.NODE_ENV,
         title: this.$baseTitle,
         form: {
-          username: '',
+          userName: '',
           password: '',
         },
         rules: {
-          username: [
+          userName: [
             {
               required: true,
               trigger: 'blur',
-              validator: validateusername,
+              validator: validateuserName,
             },
           ],
           password: [

@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-09 12:35:11
+ * @LastEditTime: 2020-12-10 14:47:06
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -15,6 +15,14 @@ export async function login(data) {
   }
   return request({
     url: '/login',
+    method: 'post',
+    data,
+  })
+}
+export async function userLogin(data) {
+  console.log(data)
+  return request({
+    url: '/user/login',
     method: 'post',
     data,
   })

@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-09 12:39:40
+ * @LastEditTime: 2020-12-10 16:19:21
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -11,7 +11,7 @@
  */
 
 import Vue from 'vue'
-import { getUserInfo, login, logout } from '@/api/user'
+import { getUserInfo, login, logout, userLogin } from '@/api/user'
 import {
   getAccessToken,
   removeAccessToken,
@@ -52,10 +52,13 @@ const actions = {
     commit('setPermissions', permissions)
   },
   async login({ commit }, userInfo) {
-    const { data } = await login(userInfo)
-    const accessToken = data[tokenName]
-    if (accessToken) {
-      commit('setAccessToken', accessToken)
+    // const { data } = await login(userInfo)
+    const { code, result } = await userLogin(userInfo)
+    // const accessToken = data[tokenName]
+    // if (accessToken) {
+    if (code === 200) {
+      let { name, password } = result.data
+      commit('setAccessToken', JSON.stringify({ name, password }))
       const hour = new Date().getHours()
       const thisTime =
         hour < 8
@@ -70,23 +73,26 @@ const actions = {
       Vue.prototype.$baseNotify(`欢迎登录${title}`, `${thisTime}！`)
     } else {
       Vue.prototype.$baseMessage(
-        `登录接口异常，未正确返回${tokenName}...`,
+        // `登录接口异常，未正确返回${tokenName}...`,
+        result.msg,
         'error'
       )
     }
   },
   async getUserInfo({ commit, state }) {
-    const { data } = await getUserInfo(state.accessToken)
-    if (!data) {
+    let { name, password } = JSON.parse(getAccessToken())
+    // const { data } = await getUserInfo(state.accessToken)
+    if (!name || !password) {
       Vue.prototype.$baseMessage('验证失败，请重新登录...', 'error')
       return false
     }
-    let { permissions, username, avatar } = data
-    if (permissions && username && Array.isArray(permissions)) {
-      commit('setPermissions', permissions)
-      commit('setUsername', username)
-      commit('setAvatar', avatar)
-      return permissions
+    // let { permissions, username, avatar } = data
+    // if (permissions && username && Array.isArray(permissions)) {
+    if (name && password) {
+      commit('setPermissions', password)
+      commit('setUsername', name)
+      commit('setAvatar', name)
+      return ['admin']
     } else {
       Vue.prototype.$baseMessage('用户信息接口异常', 'error')
       return false
