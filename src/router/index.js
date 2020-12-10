@@ -376,6 +376,28 @@ export const asyncRoutes = [
     ],
   },
   {
+    path: '/server',
+    component: Layout,
+    redirect: 'noRedirect',
+    name: 'server',
+    alwaysShow: true,
+    meta: { title: '服务器', icon: 'database' },
+    children: [
+      {
+        path: 'user',
+        name: 'user',
+        component: () => import('@/views/server/user'),
+        meta: { title: '用户' },
+      },
+      {
+        path: 'interface',
+        name: 'interface',
+        component: () => import('@/views/server/interface'),
+        meta: { title: '接口' },
+      },
+    ],
+  },
+  {
     path: '*',
     redirect: '/404',
     hidden: true,

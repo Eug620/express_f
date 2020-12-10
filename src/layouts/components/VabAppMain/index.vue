@@ -1,6 +1,13 @@
+<!--
+ * @Author: yeyuhang
+ * @Date: 2020-12-09 11:29:19
+ * @LastEditTime: 2020-12-10 11:17:12
+ * @LastEditors: yeyuhang
+ * @Descripttion: 头部注释
+-->
 <template>
   <div v-if="routerView" class="app-main-container">
-    <vab-github-corner />
+    <!-- <vab-github-corner /> -->
     <transition mode="out-in" name="fade-transform">
       <keep-alive :include="cachedRoutes" :max="keepAliveMaxNum">
         <router-view :key="key" class="app-main-height" />
