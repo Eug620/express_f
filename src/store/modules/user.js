@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-10 16:19:21
+ * @LastEditTime: 2020-12-11 12:25:16
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -11,7 +11,7 @@
  */
 
 import Vue from 'vue'
-import { getUserInfo, login, logout, userLogin } from '@/api/user'
+import { logout, userLogin } from '@/api/user'
 import {
   getAccessToken,
   removeAccessToken,
