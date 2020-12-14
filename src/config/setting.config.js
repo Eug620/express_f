@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-14 11:25:54
+ * @LastEditTime: 2020-12-14 14:26:38
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -25,7 +25,7 @@ const setting = {
   //   process.env.NODE_ENV === 'development'
   //     ? 'http://47.93.229.170:3000'
   //     : 'http://47.93.229.170:3000',
-  baseURL: process.env.NODE_ENV === 'development' ? '/api' : '/api',
+  baseURL: 'http://47.93.229.170:3000',
   // baseURL:
   //   process.env.NODE_ENV === 'development'
   //     ? 'vab-mock-server'
