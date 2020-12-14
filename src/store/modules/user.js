@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-11 12:25:16
+ * @LastEditTime: 2020-12-14 11:57:03
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -99,7 +99,7 @@ const actions = {
     }
   },
   async logout({ dispatch }) {
-    await logout(state.accessToken)
+    // await logout(state.accessToken)
     await dispatch('resetAccessToken')
     await resetRouter()
   },

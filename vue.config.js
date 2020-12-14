@@ -57,8 +57,8 @@ module.exports = {
     after: mockServer(),
     proxy: {
       '/api': {
-        // target: 'http://47.93.229.170:3000',
-        target: 'http://192.168.1.140:3000',
+        target: 'http://47.93.229.170:3000',
+        // target: 'http://192.168.1.140:3000',
         pathRewrite: {
           '^/api': '',
         },
