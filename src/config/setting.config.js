@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-14 11:16:26
+ * @LastEditTime: 2020-12-14 11:25:54
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -25,11 +25,11 @@ const setting = {
   //   process.env.NODE_ENV === 'development'
   //     ? 'http://47.93.229.170:3000'
   //     : 'http://47.93.229.170:3000',
-  // baseURL: process.env.NODE_ENV === 'development' ? '/api' : '/api',
-  baseURL:
-    process.env.NODE_ENV === 'development'
-      ? 'vab-mock-server'
-      : 'vab-mock-server',
+  baseURL: process.env.NODE_ENV === 'development' ? '/api' : '/api',
+  // baseURL:
+  //   process.env.NODE_ENV === 'development'
+  //     ? 'vab-mock-server'
+  //     : 'vab-mock-server',
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
   title: 'Test-Font',
   //简写
