@@ -173,26 +173,39 @@
 <style lang="scss" scoped>
   .login-container {
     height: 100vh;
-    background: url('~@/assets/login_images/background.jpg') center center fixed
-      no-repeat;
+    z-index: -999;
+    // background: url('~@/assets/login_images/background.jpg') center center fixed
+    //   no-repeat;
+    background-image: url('https://farm3.staticflickr.com/2927/33167804003_b19f5cd800_k.jpg?momo_cache_bg_uuid=14ad3de7-af7f-4ff0-a8bd-a2caeca10135');
     background-size: cover;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     .title {
       font-size: 54px;
       font-weight: 500;
-      color: rgba(14, 18, 26, 1);
+      // color: rgba(14, 18, 26, 1);
+      color: #fff;
     }
 
     .title-tips {
       margin-top: 29px;
       font-size: 26px;
       font-weight: 400;
-      color: rgba(14, 18, 26, 1);
+      // color: rgba(14, 18, 26, 1);
+      color: #fff;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
     .login-btn {
+      font-size: 18px;
       display: inherit;
       width: 220px;
       height: 60px;
@@ -203,13 +216,24 @@
         opacity: 0.9;
       }
     }
-
+    .login-form:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background-color: #ccc;
+      opacity: 0.5;
+      border-radius: 20px;
+    }
     .login-form {
       position: relative;
       max-width: 100%;
       margin: calc((100vh - 425px) / 2) 10% 10%;
       overflow: hidden;
-
+      padding: 20px;
       .forget-password {
         width: 100%;
         margin-top: 40px;
