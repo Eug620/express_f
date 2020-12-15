@@ -173,7 +173,7 @@
 <style lang="scss" scoped>
   .login-container {
     height: 100vh;
-    z-index: -999;
+    // z-index: -999;
     // background: url('~@/assets/login_images/background.jpg') center center fixed
     //   no-repeat;
     background-image: url('https://farm3.staticflickr.com/2927/33167804003_b19f5cd800_k.jpg?momo_cache_bg_uuid=14ad3de7-af7f-4ff0-a8bd-a2caeca10135');
@@ -223,12 +223,13 @@
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: -1;
+      z-index: -99;
       background-color: #ccc;
       opacity: 0.5;
       border-radius: 20px;
     }
     .login-form {
+      z-index: 9999;
       position: relative;
       max-width: 100%;
       margin: calc((100vh - 425px) / 2) 10% 10%;
