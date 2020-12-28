@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-28 15:30:17
+ * @LastEditTime: 2020-12-28 15:34:55
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -31,9 +31,9 @@ const setting = {
   //     ? 'vab-mock-server'
   //     : 'vab-mock-server',
   //标题 （包括初次加载雪花屏的标题 页面的标题 浏览器的标题）
-  title: 'Test-Font',
+  title: 'Just so so',
   //简写
-  abbreviation: 'E-F',
+  abbreviation: 'JSS',
   //开发环境端口号
   devPort: '5000',
   //版本号
