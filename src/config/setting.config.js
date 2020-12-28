@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-12-09 11:29:19
- * @LastEditTime: 2020-12-14 14:26:38
+ * @LastEditTime: 2020-12-28 15:30:17
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -21,11 +21,11 @@ const setting = {
   transpileDependencies: ['vue-echarts', 'resize-detector'],
   // 默认的接口地址 如果是开发环境和生产环境走api，当然你也可以选择自己配置成需要的接口地址
   // baseURL: process.env.NODE_ENV === 'development' ? 'api' : 'api',
-  // baseURL:
-  //   process.env.NODE_ENV === 'development'
-  //     ? 'http://47.93.229.170:3000'
-  //     : 'http://47.93.229.170:3000',
-  baseURL: 'http://47.93.229.170:3000',
+  baseURL:
+    process.env.NODE_ENV === 'development'
+      ? 'api'
+      : 'http://47.93.229.170:3000',
+  // baseURL: 'http://47.93.229.170:3000',
   // baseURL:
   //   process.env.NODE_ENV === 'development'
   //     ? 'vab-mock-server'
